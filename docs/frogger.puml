@@ -1,0 +1,38 @@
+@startuml
+
+class Auto
+class Rana
+class Juego
+class Camion
+class Vida
+class Movimiento
+class Jugador
+class Limite
+class Vida
+class Daño
+class Menu
+class Dificultad
+class Puntaje
+class Tiempo
+class Camino
+
+Jugador o-- Rana
+Rana *-- Movimiento
+Juego *-- Rana
+Rana *--Vida
+Juego *-- Limite
+Juego o-- Camion
+Camion --|> Daño
+Auto --|> Daño
+Juego o-- Auto
+Auto *-- Movimiento
+Camion *-- Movimiento
+Juego *-- Menu
+Menu *-- Dificultad
+Rana o-- Puntaje
+Rana *-- Tiempo
+Rana o-- Camino
+Auto o-- Camino
+Camion o-- Camino
+
+@enduml
